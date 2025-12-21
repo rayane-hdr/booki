@@ -475,6 +475,16 @@ footer {
         gap: 30px;
     }
 
+    .filters-list {
+        flex-wrap: nowrap;
+    }
+
+    .filter-button {
+        flex: 1;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 20px;
@@ -537,6 +547,7 @@ footer {
 
     .activites-cards img {
         height: 160px;
+        object-fit: cover;
     }
 
     footer {
