@@ -17,6 +17,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+    padding: 0;
 }
 
 .main-container {
@@ -74,7 +75,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding: 20px 0 30px 0;
 }
 
 .header-top {
@@ -85,7 +86,7 @@ header {
 }
 
 header img {
-    height: 40px;
+    height: 35px;
 }
 
 nav {
@@ -115,7 +116,7 @@ nav a:hover {
     font-size: 22px;
 }
 
-.search-section > p {
+.search-section>p {
     margin: 0 0 20px 0;
     font-size: 16px;
 }
@@ -133,10 +134,11 @@ nav a:hover {
     overflow: hidden;
 }
 
-.search-input-group i {
+.search-input-group>i {
     padding: 0 15px;
     background-color: var(--main-bg-color);
     border-radius: 15px 0 0 15px;
+    color: black;
 }
 
 .search-input {
@@ -411,7 +413,6 @@ nav a:hover {
     width: 100%;
     height: 211px;
     object-fit: cover;
-    border-radius: 20px 20px 0 0;
 }
 
 .activites-cards .card-title {
@@ -427,9 +428,10 @@ footer {
     padding: 40px 50px;
     display: flex;
     gap: 50px;
-    margin: 0 -50px 0 -50px;
-    width: calc(100% + 100px);
-    max-width: 1440px;
+    width: 100%;
+    max-width: 1340px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .footer-section {
@@ -467,25 +469,34 @@ footer {
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .main-container {
-        padding: 0 30px;
+        padding: 0 20px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     header {
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     nav {
-        gap: 30px;
+        gap: 20px;
+    }
+
+    .filters {
+        gap: 15px;
     }
 
     .filters-list {
-        flex-wrap: nowrap;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .filter-button {
-        flex: 1;
-        font-size: 14px;
-        padding: 8px 15px;
+        width: calc(50% - 5px);
+        font-size: 13px;
+        padding: 8px 12px;
+        white-space: nowrap;
     }
 
     .hebergements-and-populaires {
@@ -498,7 +509,7 @@ footer {
     }
 
     .hebergements-cards a {
-        width: calc(33.333% - 20px);
+        width: calc(50% - 15px);
     }
 
     .populaires {
@@ -506,94 +517,69 @@ footer {
     }
 
     .populaires-cards {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column;
         gap: 20px;
-    }
-
-    .populaires-cards a {
-        width: calc(33.333% - 14px);
     }
 
     .populaires-cards .card {
-        height: auto;
-        flex-direction: column;
-    }
-
-    .populaires-cards img {
         width: 100%;
-        height: 124px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 0;
+        height: 144px;
+        display: flex;
     }
 
-    .populaires-cards .card-content {
-        width: 100%;
-        padding: 12px;
-    }
-
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
+    .activites-cards {
+        gap: 20px;
     }
 
     .activites-cards a {
-        width: calc(50% - 15px);
+        width: calc(50% - 10px);
     }
 
     .activites-cards .card {
-        height: 211px;
-        padding: 0;
+        height: 180px;
     }
 
     .activites-cards img {
-        height: 160px;
-        object-fit: cover;
-        border-radius: 20px 20px 0 0;
+        height: 140px;
     }
 
     footer {
-        padding: 40px 30px;
-        margin: 0 -30px -0 -30px;
+        padding: 30px 20px;
+        max-width: 100%;
+        gap: 30px;
     }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+/* Small devices (mobiles, less/equal than 767px) */
+@media (max-width: 767px) {
     .main-container {
         padding: 0 15px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     header {
-        flex-direction: column;
-        gap: 20px;
         padding: 15px 0;
-    }
-
-    .header-top {
         flex-direction: column;
-        width: 100%;
     }
 
     header img {
-        height: 35px;
+        height: 25px;
     }
 
     nav {
         width: 100%;
         gap: 0;
         justify-content: space-around;
+        padding-top: 15px;
+        border-top: 2px solid var(--main-bg-color);
     }
 
     nav a {
-        padding-bottom: 10px;
-        border-bottom: 3px solid var(--main-bg-color);
+        padding: 10px 0;
         border-top: none;
-        flex: 1;
-        text-align: center;
+        border-bottom: 3px solid transparent;
     }
 
     nav a:hover {
@@ -601,22 +587,28 @@ footer {
         border-bottom-color: var(--main-color);
     }
 
-    .search-section h1 {
-        font-size: 20px;
-    }
-
-    .search-section > p {
-        font-size: 14px;
+    .search-section {
+        margin-bottom: 20px;
     }
 
     .search-input-group {
         width: 100%;
+        border-radius: 15px;
     }
 
     .search-input {
         width: 100%;
         padding: 12px 10px;
         font-size: 16px;
+        border-radius: 0;
+    }
+
+    .search-button {
+        padding: 12px 15px;
+        border-radius: 0 15px 15px 0;
+        font-size: 16px;
+        background-color: var(--main-color);
+        border: none;
     }
 
     .search-button-text {
@@ -627,33 +619,27 @@ footer {
         display: inline;
         color: white;
         font-size: 16px;
-    }
-
-    .search-button {
-        padding: 12px 12px;
-        background-color: var(--main-color);
+        background: none;
+        padding: 0;
     }
 
     .filters {
-        gap: 10px;
-    }
-
-    .filters-title {
-        width: 100%;
-        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 
     .filters-list {
-        width: 100%;
-        gap: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
     }
 
     .filter-button {
-        justify-content: center;
-        padding: 10px 8px;
-        font-size: 13px;
+        width: 100%;
+        font-size: 14px;
+        padding: 8px 15px;
     }
 
     .hebergements-and-populaires {
@@ -661,11 +647,16 @@ footer {
         gap: 20px;
     }
 
+    .hebergements-and-populaires section {
+        background-color: white;
+        padding: 20px;
+        border-radius: 0;
+    }
+
     .hebergements {
         width: 100%;
-        padding: 20px;
-        background-color: white;
         order: 2;
+        background-color: white;
     }
 
     .hebergements-cards {
@@ -678,13 +669,15 @@ footer {
     }
 
     .hebergements-cards img {
-        height: 180px;
+        height: 124px;
     }
 
     .populaires {
         width: 100%;
-        padding: 20px;
         order: 1;
+        background-color: var(--main-bg-color);
+        padding: 20px;
+        border-radius: 0;
     }
 
     .populaires-cards {
@@ -692,29 +685,16 @@ footer {
         gap: 20px;
     }
 
-    .populaires-cards a {
-        width: 100%;
-    }
-
     .populaires-cards .card {
-        height: auto;
-        flex-direction: column;
+        width: 100%;
+        height: 144px;
+        border-radius: 0;
     }
 
     .populaires-cards img {
-        width: 100%;
-        height: 180px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-        border-bottom-left-radius: 0;
-    }
-
-    .populaires-cards .card-content {
-        width: 100%;
-    }
-
-    .activites {
-        margin-bottom: 30px;
+        width: 33%;
+        height: 100%;
+        border-radius: 0;
     }
 
     .activites-cards {
@@ -722,36 +702,45 @@ footer {
         gap: 20px;
     }
 
+    .activites-cards {
+        padding: 0;
+        margin: 0;
+    }
+
     .activites-cards a {
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .activites-cards .card {
         height: 200px;
+        border-radius: 0;
         padding: 0;
+        margin: 0;
     }
 
     .activites-cards img {
-        height: 150px;
-        border-radius: 20px 20px 0 0;
-    }
-
-    .show-more {
-        font-size: 16px;
+        height: 124px;
+        border-radius: 0;
+        width: 100%;
+        display: block;
     }
 
     footer {
         flex-direction: column;
-        padding: 30px 20px;
-        margin: 0 -20px -0 -20px;
+        padding: 20px 15px;
         gap: 30px;
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .footer-section h3 {
-        font-size: 16px;
+        margin-bottom: 15px;
     }
 
-    .footer-section a {
-        font-size: 14px;
+    .footer-section li {
+        margin-bottom: 8px;
     }
 }
