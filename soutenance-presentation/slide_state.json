@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "title": "Soutenance d'Intégration HTML/CSS",
+    "created": 1765808119.9516606,
+    "last_updated": 1765808313.0469093,
+    "total_slides": 9
+  },
+  "slides": {
+    "slide_1_titre": "edited",
+    "slide_2_contexte": "edited",
+    "slide_3_specs_techniques": "edited",
+    "slide_4_desktop": "edited",
+    "slide_5_responsive": "edited",
+    "slide_6_html_semantique": "edited",
+    "slide_7_css_flexbox": "edited",
+    "slide_8_defis_solutions": "edited",
+    "slide_9_bilan": "edited"
+  },
+  "outline": [
+    {
+      "id": "slide_1_titre",
+      "title": "Soutenance d'Intégration HTML/CSS",
+      "summary": "Présentation du projet Booki : Intégration de la page d'accueil avec HTML et CSS, respectant les maquettes desktop, tablette et mobile.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_2_contexte",
+      "title": "Contexte et Objectifs du Projet",
+      "summary": "Rappel du contexte : permettre aux usagers de trouver des hébergements et des activités. Objectif : valider l'interface utilisateur avant le développement des fonctionnalités.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_3_specs_techniques",
+      "title": "Spécifications Techniques Clés",
+      "summary": "Approche Desktop First, utilisation exclusive de Flexbox, Media Queries pour responsive design, largeur maximale 1440px, aucun framework CSS.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_4_desktop",
+      "title": "Rendu Visuel - Version Desktop",
+      "summary": "Structure en deux colonnes (Hébergements à gauche, Populaires à droite) réalisée via Flexbox. Respect de la charte graphique avec couleurs, police Raleway et icônes Font Awesome.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_5_responsive",
+      "title": "Adaptation Responsive - Tablette et Mobile",
+      "summary": "Tablette : passage en une colonne, cartes Populaires en horizontal. Mobile : réorganisation de l'en-tête, navigation verticale, inversion de l'ordre des sections.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_6_html_semantique",
+      "title": "Structure HTML et Sémantique",
+      "summary": "Utilisation de balises sémantiques (header, nav, main, section, article, footer) pour une meilleure accessibilité et SEO. Attributs alt pour les images et aria-hidden pour les icônes décoratives.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_7_css_flexbox",
+      "title": "Organisation du Style CSS et Flexbox",
+      "summary": "Utilisation intensive de Flexbox pour la mise en page. Variables CSS pour les couleurs. Media Queries bien structurées pour gérer les changements aux breakpoints 1024px et 768px.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_8_defis_solutions",
+      "title": "Défis d'Intégration et Solutions",
+      "summary": "Gestion de la structure deux colonnes/une colonne, inversion de l'ordre des sections, adaptation du bouton de recherche. Solutions via Flexbox et Media Queries.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_9_bilan",
+      "title": "Bilan et Prochaines Étapes",
+      "summary": "Toutes les spécifications respectées. Code propre, sémantique et valide W3C. Maintenabilité assurée. Prochaines étapes : intégration JavaScript, autres pages, tests d'accessibilité.",
+      "image_plan": "Use a suitable image if needed",
+      "slide_template_key": ""
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptation Responsive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 60px 80px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+
+        .accent-line {
+            width: 4px;
+            height: 60px;
+            background: #0065BD;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0065BD;
+            line-height: 1.3;
+        }
+
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .device-section {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .device-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333333;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #DEEBFF;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            width: 8px;
+            height: 8px;
+            background: #0065BD;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .feature-text {
+            font-size: 15px;
+            font-weight: 400;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #0065BD;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Adaptation Responsive - Tablette et Mobile</h2>
+        </div>
+
+        <div class="responsive-grid">
+            <div class="device-section">
+                <div class="device-title">Tablette (≤ 1024px)</div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Passage de la structure principale en <span class="highlight">une seule colonne</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Hébergements puis Populaires affichés <span class="highlight">verticalement</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Les cartes "Populaires" passent en affichage <span class="highlight">horizontal</span> pour optimiser l'espace</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Utilisation de <span class="highlight">flex-direction: row</span> pour les cartes populaires</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="device-section">
+                <div class="device-title">Mobile (< 768px)</div>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text"><span class="highlight">Réorganisation de l'en-tête</span> avec navigation verticale</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Navigation passe sous le logo avec <span class="highlight">flex-direction: column</span></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text"><span class="highlight">Inversion de l'ordre</span> des sections (Populaires avant Hébergements)</div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"></div>
+                        <div class="feature-text">Bouton de recherche affiche uniquement l'<span class="highlight">icône loupe</span> pour gagner de la place</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

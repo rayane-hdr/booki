@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure HTML et Sémantique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 60px 80px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            gap: 40px;
+        }
+
+        .accent-line {
+            width: 4px;
+            height: 60px;
+            background: #0065BD;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0065BD;
+            line-height: 1.3;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .hierarchy-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hierarchy-section h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .tag-box {
+            background: #F2F2F2;
+            border-left: 4px solid #0065BD;
+            padding: 12px 16px;
+            margin-left: 0;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333333;
+            font-family: 'Courier New', monospace;
+        }
+
+        .tag-box.nested-1 {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .tag-box.nested-2 {
+            margin-left: 40px;
+            margin-top: 8px;
+        }
+
+        .accessibility-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .accessibility-section h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #333333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .attribute-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .attribute-icon {
+            width: 6px;
+            height: 6px;
+            background: #0065BD;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        .attribute-content {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .attribute-label {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333333;
+            font-family: 'Courier New', monospace;
+        }
+
+        .attribute-description {
+            font-size: 13px;
+            font-weight: 400;
+            color: #666666;
+            line-height: 1.4;
+        }
+
+        .benefit {
+            background: #DEEBFF;
+            border-left: 4px solid #0065BD;
+            padding: 12px 16px;
+            margin-top: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        .highlight {
+            color: #0065BD;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="accent-line"></div>
+            <h2>Structure HTML et Sémantique</h2>
+        </div>
+
+        <div class="content">
+            <div class="hierarchy-section">
+                <h3>Hiérarchie des Balises</h3>
+                <div class="tag-box">&lt;header&gt;</div>
+                <div class="tag-box nested-1">&lt;nav&gt;</div>
+                <div class="tag-box">&lt;main&gt;</div>
+                <div class="tag-box nested-1">&lt;section&gt;</div>
+                <div class="tag-box nested-2">&lt;article&gt;</div>
+                <div class="tag-box nested-1">&lt;section&gt;</div>
+                <div class="tag-box">&lt;footer&gt;</div>
+            </div>
+
+            <div class="accessibility-section">
+                <h3>Attributs d'Accessibilité</h3>
+                
+                <div class="attribute-item">
+                    <div class="attribute-icon"></div>
+                    <div class="attribute-content">
+                        <div class="attribute-label">alt=""</div>
+                        <div class="attribute-description">Texte alternatif pour toutes les images</div>
+                    </div>
+                </div>
+
+                <div class="attribute-item">
+                    <div class="attribute-icon"></div>
+                    <div class="attribute-content">
+                        <div class="attribute-label">aria-hidden="true"</div>
+                        <div class="attribute-description">Masque les icônes décoratives des lecteurs d'écran</div>
+                    </div>
+                </div>
+
+                <div class="benefit">
+                    <span class="highlight">Impact :</span> Meilleure accessibilité pour les utilisateurs en situation de handicap et amélioration du SEO pour les moteurs de recherche.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
